@@ -24,19 +24,20 @@
           </thead>
           
           <tbody>
-            <tr v-for="electeur in electeurs" :key="electeur.numeropiece" v-if="!electeur.valider">
-    
-              <td class="td">{{ electeur.numeropiece }}</td>
-              <td class="td" >{{electeur.nomelecteur}}</td>
-              <td class="td">{{electeur.prenomelecteur}}</td>
-              <td class="td">{{electeur.emailelecteur}}</td>
-              <td class="td">{{electeur.date_naissance}}</td>
-              <td class="td"><a :href="electeur.pieceelecteur" :download="electeur.pieceelecteur">Download</a></td>
-             <td class="td"><a :href="electeur.photoelecteur" :download="electeur.photoelecteur">Download</a></td>
-              <td class="td"><a :href="electeur.justlogement" :download="electeur.justlogement">Download</a></td>
-               <td class="td">
+            <tr v-for="electeur in electeurs" :key="electeur.numeropiece" >
+              <div v-if="!electeur.valider">
+                <td class="td">{{ electeur.numeropiece }}</td>
+                <td class="td" >{{electeur.nomelecteur}}</td>
+                <td class="td">{{electeur.prenomelecteur}}</td>
+                <td class="td">{{electeur.emailelecteur}}</td>
+                <td class="td">{{electeur.date_naissance}}</td>
+                <td class="td"><a :href="electeur.pieceelecteur" :download="electeur.pieceelecteur">Download</a></td>
+                <td class="td"><a :href="electeur.photoelecteur" :download="electeur.photoelecteur">Download</a></td>
+                <td class="td"><a :href="electeur.justlogement" :download="electeur.justlogement">Download</a></td>
+                <td class="td">
                 <button type="button" class="btn btn-info" @click="valider(electeur)">Valider</button>
                 <button type="button" class="btn btn-danger" @click="invalider(electeur)">Invalider</button></td>
+              </div>
             </tr>
           </tbody>
            
@@ -48,11 +49,12 @@
   </div>
 
     </div>
-</div>
+
 
 
 <!--  N  O  N  ____________________  C  O  N  N  E  C  T  E -->
 <div v-else>
+
 </div>     
 
 </template>

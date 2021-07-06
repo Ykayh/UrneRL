@@ -72,7 +72,8 @@
             <div v-if="!vote" style="text-align:center">
               <button  type="button" class="btn btn-info" id="bat2" @click="voter(candidat)">Voter</button>
             </div> 
-            <div v-else= style="text-align:center">
+
+            <div v-else style="text-align:center">
               <p style="color:blue;text-align:center">Merci d'avoir voté</p>
             </div> 
         </div>
@@ -112,7 +113,7 @@
             <div v-if="!vote" style="text-align:center">
               <button  type="button" class="btn btn-info" id="bat2" @click="voter(candidat)">Voter</button>
             </div> 
-            <div v-else= style="text-align:center">
+            <div v-else style="text-align:center">
               <p style="color:blue;text-align:center">Merci d'avoir voté</p>
             </div> 
         </div>
@@ -151,7 +152,7 @@
           </div>
 
           <div id="editGame" class="form-group">
-              <label style="color:black"for="date">Date de l'élection</label>
+              <label style="color:black" for="date">Date de l'élection</label>
               <input type="date" v-model="newCandidat.dateE" class="form-control" id="date" placeholder="Entrer Date de naissance" required>
           </div>
 
@@ -172,7 +173,7 @@
             </div>
             <div>
               <input type="radio" v-model="newCandidat.sexe" id="Femme" name="drone" value="Femme">
-              <label style="color:black"for="Femme">Femme</label>
+              <label style="color:black " for="Femme">Femme</label>
             </div>
           </div>
 
@@ -190,11 +191,11 @@
          <!-- Photo -->
           <div class="form-group">
               <label for="photo" style="color:black">Joindre photo récente</label>
-              <input type="file" id="p3" class="form-control" id="photo" placeholder="Photo" required>
+              <input type="file" class="form-control" id="photo" placeholder="Photo" required>
           </div>
 
           <div>
-              <input type="text" ref="file-input" id="file" v-model="newCandidat.photo" class="form-control" id="photo" placeholder="Photo" >
+              <input type="text" ref="file-input" id="file" v-model="newCandidat.photo" class="form-control" placeholder="Photo" >
           </div>
         
               <button style="margin-top:5%;margin-left:3%" id="btnConnexion" class="btn btn-primary pull-right" type="submit">Ajouter</button>
@@ -233,7 +234,7 @@
           </div>
           <div>
             <input type="radio" v-model="editingCandidat.sexe" id="Femme" name="drone" value="Femme">
-            <label style="color:black"for="Femme">Femme</label>
+            <label style="color:black" for="Femme">Femme</label>
           </div>
         </div>
 
@@ -251,11 +252,11 @@
          <!-- Photo -->
           <div>
               <label for="photo" style="color:black">Joindre photo récente</label>
-              <input type="file" ref="file-input" id="file"  class="form-control" id="photo" placeholder="Photo" >
+              <input type="file" ref="file-input" id="file2"  class="form-control"  placeholder="Photo" >
           </div>
 
           <div>
-              <input type="text" ref="file-input" id="file" v-model="editingCandidat.photo" class="form-control" id="photo" placeholder="Photo" >
+              <input type="text" ref="file-input" id="file3" v-model="editingCandidat.photo" class="form-control" placeholder="Photo" >
           </div>
         
               <button style="margin-top:5%;margin-left:3%" id="btnConnexion" class="btn btn-primary pull-right" type="submit">Modifier</button>
@@ -358,7 +359,7 @@
               <button type="button" class="btn btn-info" id="bat2" @click="voter(candidat)">Voter</button>
                <!--p v-else style="color:blue;text-align:center">Le vote aura lieu le {{candidat.date}} à partir de {{candidat.heurefin}}</p-->
             </div> 
-            <div v-else= style="text-align:center">
+            <div v-else style="text-align:center">
               <p style="color:blue;text-align:center">Merci d'avoir voté</p>
             </div> 
         </div>
@@ -457,7 +458,7 @@
             <div v-if="!vote" style="text-align:center">
               <button  type="button" class="btn btn-info" id="bat2" @click="voter(candidat)">Voter</button>
             </div> 
-            <div v-else= style="text-align:center">
+            <div v-else style="text-align:center">
               <p style="color:blue;text-align:center">Merci d'avoir voté</p>
             </div> 
         </div>

@@ -12,31 +12,31 @@
   				<!-- Numero de piece d'identité -->
   				<div class="form-group">
     					<label for="exampleInputEmail2">Type d'election</label>
-    					<input type="text" v-model="newElection.typeElection" id="e" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Entrer type election" required>
+    					<input type="text" v-model="newElection.typeElection" id="e" class="form-control" aria-describedby="emailHelp" placeholder="Entrer type election" required>
   				</div>
   	
   			  <!-- Nom -->
   				<div class="form-group">
     					<label for="date">Date</label>
-    					<input type="date" v-model="newElection.dateDebut" id="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer Date de l'election" required>
+    					<input type="date" v-model="newElection.dateDebut" id="date" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer Date de l'election" required>
   				</div>
   
   				<!-- Prenom -->
   				<div class="form-group">
     					<label for="heureDebut">Heure de début</label>
-    					<input type="time" v-model="newElection.heureDebut" id="heureDebut" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer Heure de début" required>
+    					<input type="time" v-model="newElection.heureDebut" id="heureDebut" class="form-control" aria-describedby="emailHelp" placeholder="Entrer Heure de début" required>
   				</div>
 
   				<!-- Heure de fin -->
   				<div class="form-group">
     					<label for="heureFin">Heure de Fin</label>
-    					<input type="time" v-model="newElection.heureFin" id="heureFin" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer Date de Fin" required>
+    					<input type="time" v-model="newElection.heureFin" id="heureFin" class="form-control" aria-describedby="emailHelp" placeholder="Entrer Date de Fin" required>
   				</div>
 
   				<!-- Email -->
   				<div class="form-group">
     					<label for="email">Disposition electorale</label>
-    					<input type="text" id="p2" v-model="newElection.dispElectorale" class="form-control" id="email" placeholder="Entrer disposition du code electoral" required>
+    					<input type="text" v-model="newElection.dispElectorale" class="form-control" id="email" placeholder="Entrer disposition du code electoral" required>
   				</div>
 
   				<!-- Date de naissance -->
@@ -59,7 +59,7 @@
 			</div>
 
 			<div style="color:white;margin-bottom:10%">
-				<router-link style="color:black;text-align:center" to='/login' class="nav-link" style="color:black" tabindex="-1"><span class="ins"></span> </router-link>
+				<router-link style="color:black;text-align:center" to='/login' class="nav-link"  tabindex="-1"><span class="ins"></span> </router-link>
 			</div>
   </div>
 

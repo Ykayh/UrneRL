@@ -1,6 +1,6 @@
 <template>
 <div>
-<div style="display:flex;;" >
+<div style="display:flex;" >
 
 
 	<div id="form" >
@@ -14,12 +14,12 @@
   			
   				<div class="form-group">
     				<label for="exampleInputEmail1" style="color:black">Identifant</label>
-    				<input type="text" v-model="newUser.id" id="e" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter identifiant" required>
+    				<input type="text" v-model="newUser.id" id="e" class="form-control"  aria-describedby="emailHelp" placeholder="Enter identifiant" required>
   				</div>
   			<br>
   				<div class="form-group">
     				<label style="color:black" for="exampleInputPassword1">Password</label>
-    				<input type="password" id="p" v-model="newUser.password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+    				<input type="password" id="p" v-model="newUser.password" class="form-control" placeholder="Password" required>
   				</div>
   <br>
   				<div id="vali" style="display:flex">

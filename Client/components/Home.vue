@@ -2,7 +2,7 @@
 
 
   <div class="body">
-    <div v-for="election in electionprincipale">
+    <div v-for="election in electionprincipale" :key="election.id_election">
       <br>
       <div style="text-align:center;width:45%;margin:auto;color:black">
         <p style="font-size:200%">Tour n° {{election.tour}} de l'élection {{election.typeelection}} 
@@ -23,15 +23,20 @@
       </div>
       <br>
 
-        <div style="text-align:center"><button v-if="!isConnected" type="button" class="btn btn-warning">  
+        <div style="text-align:center">
+          <button v-if="!isConnected" type="button" class="btn btn-warning">  
 
           
-          <router-link v-if="vainqueurs.length > 0" to='/resultats' class="nav-link" style="color:black" tabindex="-1"> Résultats </router-link>
-          <router-link v-else to='/register' class="nav-link" style="color:black" tabindex="-1"> S'inscrire </router-link></button></div><br>
+             <router-link v-if="vainqueurs.length > 0" to='/resultats' class="nav-link" style="color:black" tabindex="-1"> Résultats </router-link>
+            <router-link v-else to='/register' class="nav-link" style="color:black" tabindex="-1"> S'inscrire </router-link>
+          
+          </button>
+        </div>
+        <br>
 
         <div class="test" style="display:flex;text-align:center;width:45%;margin:auto">
         <div class="piece4">
-          <img width="75%"src="piece.jpg" alt="pieces">
+          <img width="75%" src="piece.jpg" alt="pieces">
         </div>
         
         <div style="color:black;margin:auto;font-size:130%">

@@ -35,6 +35,10 @@ router.get('/elections', async(req, res) => {
   res.json(result.rows)
 })
 
+
+/**
+ * V  a  i  n  q  u  e  u  r 
+ */
 router.get('/vainqueur', async(req, res) => {
 
   const result = await client.query({
@@ -45,6 +49,9 @@ router.get('/vainqueur', async(req, res) => {
 })
 
 
+/**
+ * E  M  A  I  L
+ */
 router.get('/email', async(req, res, next) => {
   var transporter = nodemailer.createTransport({
   service: 'gmail',

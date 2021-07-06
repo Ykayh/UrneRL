@@ -12,25 +12,25 @@
   				<!-- Numero de piece d'identité -->
   				<div class="form-group">
     					<label for="exampleInputEmail2">Numero de piece</label>
-    					<input type="text" v-model="newUser.numPiece" id="e" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Entrer Numero de piece" required>
+    					<input type="text" v-model="newUser.numPiece" id="e" class="form-control" aria-describedby="emailHelp" placeholder="Entrer Numero de piece" required>
   				</div>
   	
   			  <!-- Nom -->
   				<div class="form-group">
     					<label for="exampleInputEmail1">Nom</label>
-    					<input type="text" v-model="newUser.nom" id="e" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer nom" required>
+    					<input type="text" v-model="newUser.nom" id="e" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer nom" required>
   				</div>
   
   				<!-- Prenom -->
   				<div class="form-group">
     					<label for="prenom">Prenom</label>
-    					<input type="text" id="p" v-model="newUser.prenom" class="form-control" id="prenom" placeholder="Entrer prenom(s)" required>
+    					<input type="text"  v-model="newUser.prenom" class="form-control" id="prenom" placeholder="Entrer prenom(s)" required>
   				</div>
 
   				<!-- Email -->
   				<div class="form-group">
     					<label for="email">email</label>
-    					<input type="email" id="p2" v-model="newUser.email" class="form-control" id="email" placeholder="Entrer email" required>
+    					<input type="email"  v-model="newUser.email" class="form-control" id="email" placeholder="Entrer email" required>
   				</div>
 
   				<!-- Date de naissance -->
@@ -61,30 +61,30 @@
   				<!-- Photo -->
   				<div class="form-group">
     					<label for="photo" style="color:black">Joindre photo récente</label>
-    					<input type="file" id="p3" class="form-control" id="photo" placeholder="Photo" required>
+    					<input type="file"  class="form-control" id="photo" placeholder="Photo" required>
   				</div>
   				<div>
-              <input type="text" ref="file-input" id="file" v-model="newUser.photo" class="form-control" id="photo" placeholder="Photo" >
+              <input type="text" ref="file-input" id="file" v-model="newUser.photo" class="form-control"  placeholder="Photo" >
           </div>
   				
   				<br>
   				<!-- Piece d'identité -->
   				<div class="form-group">
     					<label for="piece" style="color:black">Joindre piece d'identité</label>
-    					<input type="file" id="p3" class="form-control" id="piece" placeholder="PIECE" required>
+    					<input type="file"  class="form-control" id="piece" placeholder="PIECE" required>
   				</div>
   				<div>
-              <input type="text" ref="file-input" id="file" v-model="newUser.piece" class="form-control" id="photo" placeholder="Photo" >
+              <input type="text" ref="file-input" id="file2" v-model="newUser.piece" class="form-control"  placeholder="Photo" >
           </div>
 
   				<br>
   				<!-- Justificatif de logement -->
   				<div class="form-group">
     					<label for="logement" style="color:black">Joindre justificatif de logement</label>
-    					<input type="file" id="p3" class="form-control" id="exampleInputPassword1" placeholder="Entrer Date de naissance" required>
+    					<input type="file" id="p3" class="form-control" placeholder="Entrer Date de naissance" required>
   				</div>
   				<div>
-              <input type="text" ref="file-input" id="file" v-model="newUser.logement" class="form-control" id="photo" placeholder="Photo" >
+              <input type="text" ref="file-input" id="file3" v-model="newUser.logement" class="form-control"  placeholder="Photo" >
           </div>
   <br>
   				<div id="vali" style="display:flex">
@@ -102,7 +102,7 @@
 			</div>
 
 			<div style="color:white;margin-bottom:10%">
-				<router-link style="color:black;text-align:center" to='/login' class="nav-link" style="color:black" tabindex="-1">Déjà inscrit ? <span class="ins">Login</span> </router-link>
+				<router-link style="color:black;text-align:center" to='/login' class="nav-link"  tabindex="-1">Déjà inscrit ? <span class="ins">Login</span> </router-link>
 			</div>
   </div>
 

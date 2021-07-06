@@ -22,7 +22,7 @@
           </div>
 
           <div id="editGame" class="form-group">
-              <label style="color:black"for="date">Date de l'élection</label>
+              <label style="color:black" for="date">Date de l'élection</label>
               <input type="date" v-model="electionParticip.date" class="form-control" id="date" placeholder="Entrer Date de naissance" required>
           </div>
 
@@ -58,13 +58,15 @@
           </thead>
           
           <tbody>
-            <tr v-for="electeur in electeursemarge" :key="electeur.numeropiece" v-if="!electeur.droitvote">
+            <tr v-for="electeur in electeursemarge" :key="electeur.numeropiece">
+              <div  v-if="!electeur.droitvote">
               <td class="td">{{ electeur.numeropiece }}</td>
               <td class="td" >{{electeur.id_electeur}}</td>
               <td class="td"><a href="#" download="vote2.jpg">Download</a></td>
                <td class="td">
                 <button type="button" class="btn btn-info" @click="validerpart(electeur)">Valider</button>
                 <button type="button" class="btn btn-danger" @click="invaliderpart(electeur)">InValider</button></td>
+              </div>
             </tr>
           </tbody>
            

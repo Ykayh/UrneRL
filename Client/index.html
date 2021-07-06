@@ -1,0 +1,200 @@
+<!Doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>UrneRL</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https : //fonts.googleapis.com/css2? family= Bebas+Neue & family= Roboto:wght@100 & display=swap" rel="stylesheet">
+        <!-- Liens de tête -->
+        <link href="style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+        <!-- Load Vue followed by Vue Router -->
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/http-vue-loader/src/httpVueLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!--  fin du lien -->
+    </head>
+
+
+    <!--Corps de la page-->
+    <body >
+        <div id="app">
+          <div id="hd">
+          <header>
+
+            <!--div style="display:flex">
+            <Barre de Navigation>
+                <div class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed;width:100%;height:10%">
+
+                    <div class="container-fluid" style="font-size:1.1em">
+
+                        <router-link title="Home" to='/' class="navbar-brand" aria-current="page">UrneURL</router-link>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+
+
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      
+                            <ul class="navbar-nav">
+                                <li class="nav-item" >
+                                  <router-link to='/game' title="S'inscrire sur la liste électorale" class="nav-link " aria-current="page" >Table de déchage</router-link>
+                                </li>
+                                <li class="nav-item">
+                                   <router-link to='/consol' title="Aller voter" class="nav-link" tabindex="-1">Table de vote</router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to='/login' title="La liste des jeux" class="nav-link">Connexion</router-link>      
+                                </li>
+                            </ul>
+    
+    </div>
+
+
+
+
+
+  </div>
+</div>
+</div-->
+
+
+<div v-if="role==='employe'" id="nar" class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div style="font-size:1.1em;width:100%">
+
+                        <router-link style="font-size: 170%;margin-left:5%;font-weight: bold" title="Home" to='/' class="navbar-brand" aria-current="page">UrneURL</router-link>
+
+
+      </div>
+
+      <div id="nav-2" style="width:100%;font-size:1.1em;justify-content: flex-end;align-items: center;flex-direction:row; display: flex">
+            <div v-if="admin">              
+              <router-link to='/programmer' title="Gerer les élections" class="nav-link na">Gerer election</router-link>
+
+            </div>
+            <div >              
+              <router-link to='/electeur' title="Gerer les électeurs" class="nav-link na">Gerer electeur</router-link>
+
+            </div>
+            <div>
+              <router-link to='/decharge' title="S'inscrire sur la liste électorale" class="nav-link na" aria-current="page" >Table de décharge</router-link>
+            </div>
+            <div>              
+              <router-link to='/candidat' title="Aller voter" class="nav-link na" tabindex="-1">Table de vote</router-link>
+            </div>
+
+            <div>
+             <router-link v-if="vainqueurs.length > 0" to='/resultats' class="nav-link" style="color:black" tabindex="-1"> Résultats </router-link>
+           </div>
+
+            <!--div>              
+              <router-link to='/login' title="La liste des jeux" class="nav-link na">Connexion</router-link>    
+            </div-->
+
+      </div>
+
+</div>
+
+
+<!-- Non employe ou autre -->
+             
+<div v-else id="nar" class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div style="font-size:1.1em;width:100%">
+
+                        <router-link style="font-size: 170%;margin-left:5%;font-weight: bold" title="Home" to='/' class="navbar-brand" aria-current="page">UrneURL</router-link>
+
+                  
+      </div>
+
+      <div id="nav-2" style="width:100%;font-size:1.1em;justify-content: flex-end;align-items: center;flex-direction:row; display: flex">
+            <div>
+              <router-link to='/decharge' title="S'inscrire sur la liste électorale" class="nav-link na" aria-current="page" >Table de décharge</router-link>
+            </div>
+            <div>              
+              <router-link to='/candidat' title="Aller voter" class="nav-link na" tabindex="-1">Table de vote</router-link>
+            </div>
+            <div>              
+              <router-link v-if="!isConnected" to='/login' title="La liste des jeux" class="nav-link na">Connexion</router-link>    
+            </div>
+
+      </div>
+</div>
+
+
+<br>
+        <!--h1 v-if="isConnected" style="text-align:center">Bienvenue {{user.pseudo}}</h1-->
+
+          <h1 style="font-weight:bold;font-size:5em;text-align:center;margin-top:10%;color:black">UrneRL</h1>  
+          <div>
+    
+      <div style="text-align:justify;width:45%;margin:auto">
+        <p style="font-size:2em;color:black"> UrneRL la solution pour réaliser l'action de voter à distance afin d'éviter tout risque de contamination dû à l'attroupement dans les bureaux de vote</p>
+      </div></div><br><br><br><br>
+
+
+
+</header>
+    </div>
+          
+
+          <main>
+            <router-view
+              :elections="elections"
+              :resultats="resulats"
+              :electeurs="electeurs"
+              :vainqueur="vainqueur"
+              :vainqueurs="vainqueurs"
+              :electeursemarge="electeursemarge"
+              :electionprincipale="electionprincipale"
+              :candidats="candidats"
+              @add-game="addGame"
+              @update-game="updateGame"
+              @delete-game="deleteGame"
+              @add-candidat="addCandidat"
+              @add-participation="addParticipation"
+              @update-candidat="updateCandidat"
+              @update-electeur="updateElecteur"
+              @refuse-electeur="refuseElecteur"
+              @delete-candidat="deleteCandidat"
+              @voter-candidat="voterCandidat"
+              @valider-electeur="validerElecteur"
+              @add-to-wish-list="addToWishList"
+              @remove-from-wish-list="removeFromWishList"
+              @login="login"
+              @result="result"
+              :user="user"
+              :is-connected="isConnected"
+              :admin="admin"
+              :role="role"
+              :vote="vote"
+              :droitvote="droitvote"
+              :fini="fini"
+              :debut="debut"
+              :id_emp="id_emp"
+            ></router-view>
+          </main>
+          <footer>
+            <div style="text-align: center;margin-left:auto; margin-right:auto;color:black">
+              Copyright 2021 Tous droits réservés 
+              Goupe 127
+            </div>
+          </footer>
+
+        </div>
+        <script src="/vue-application.js"></script>
+    </body>
+</html>

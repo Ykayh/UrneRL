@@ -1,0 +1,195 @@
+body{
+	
+  font-family : 'Bebas Neue', cursif ;
+font-family : 'Roboto', sans-serif ;
+}
+
+.body{
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(250,230,220,208));
+	
+}
+
+#app{
+	color: white;
+}
+
+#hd{
+	margin-left:auto;
+	margin-right:auto;
+	color: white;
+
+	background-image: url('vote2.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+
+}
+
+
+
+#form{
+	margin:auto;
+	width:100%;
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(250,230,220,208));
+	border: 3px solid white;
+
+}
+
+#form1{
+	background-image:url('vote3.jpg');
+	background-repeat: no-repeat;
+	border: 3px solid white;
+	width:50%;
+}
+
+#form2{
+	padding:5%;
+	width:30%;
+	height:50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid white;
+	background-color: #FFFFFF;
+}
+
+#form3{
+	padding:5%;
+	width:30%;
+	height:50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid white;
+	background-color: #FFFFFF;
+}
+
+
+#btnConnexion{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#btnConnexion:hover{
+	background-color:green;
+}
+
+.router-link{
+	color:black;	
+}
+
+.router-link:hover{
+	color:green;	
+}
+
+.na{
+	color: black;
+}
+
+.na:hover{
+	color: blue;
+}
+
+.ins{
+	color: blue;
+}
+
+.ins:hover{
+	color: red;
+}
+
+
+
+/**
+ * CANDIDATS
+ *  
+ * */
+
+.candit{
+	display: flex;
+	justify-content:space-around;
+  	flex-wrap:wrap;
+}
+
+#nar{
+	display:flex;
+	position:fixed;
+	width:100%;
+	height:10%
+	flex-wrap:wrap;
+}
+
+.chCandit{
+	width:  25%;
+	border: 2px 2px;
+	height: 500px;
+}
+
+.photo{
+
+	height: 50%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size:100%;
+
+
+	
+}
+
+.nom{
+	text-align: center;
+}
+
+.prog{
+	text-align: center;
+}
+
+#bouton1{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.table
+{
+	border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+}
+
+.th
+{
+    border: 1px solid black;
+    padding: 2%;
+    background-color: grey;
+}
+
+.td
+{
+
+    border: 1px solid black;
+    padding: 2%;
+}
+
+
+#bat2:hover{
+	background-color: green;
+	color: white;
+}
+
+.piece4{
+	height: 100%;
+	width: 50%;
+
+}
+
+.piece5{
+	height: 100%;
+	width: 50%;
+
+}
+
+.test{
+	border: 2px solid white;
+	background-color: lightblue;
+	border-radius: 10px 10px;
+}
